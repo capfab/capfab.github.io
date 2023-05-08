@@ -55,7 +55,7 @@ sections:
         - title: Technology Specialist
           company: Intel
           company_url: 'https://www.intel.com/content/www/us/en/homepage.html'
-          company_logo: images\tn.png
+          company_logo: ''
           location: Ho Chi Minh City
           date_start: '2021-02-01'
           date_end: '2021-07-31'
