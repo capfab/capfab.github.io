@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://capfab.github.io/sitemap.xml
