@@ -107,6 +107,20 @@ sections:
           organization_url: ''
           title: SBA Scholarship
           url: ''
+        - certificate_url: ''
+          date_end: ''
+          date_start: '2022-04-01'
+          description: ''
+          organization: Panasonic
+          organization_url: https://holdings.panasonic/global/corporate/sustainability/citizenship/scholarship.html
+          title: Panasonic Scholarship
+        - certificate_url: ''
+          date_end: ''
+          date_start: '2021-11-01'
+          description: ''
+          organization: Ho Chi Minh City University of Technology
+          organization_url: ''
+          title: KSYS-CUBE Scholarship
     design:
       columns: '2'  
   # - block: collection
