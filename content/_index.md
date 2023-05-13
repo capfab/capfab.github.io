@@ -96,7 +96,7 @@ sections:
           date_start: '2022-09-01'
           description: ''
           organization: Ho Chi Minh City University of Technology
-          organization_url: https://hcmut.edu.vn/en
+          organization_url: ''
           title: Excellent Thesis Award
           url: ''
         - certificate_url: ''
@@ -112,7 +112,7 @@ sections:
           date_start: '2022-04-01'
           description: ''
           organization: Panasonic
-          organization_url: https://holdings.panasonic/global/corporate/sustainability/citizenship/scholarship.html
+          organization_url: ''
           title: Panasonic Scholarship
         - certificate_url: ''
           date_end: ''
