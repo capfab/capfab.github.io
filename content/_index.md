@@ -91,6 +91,22 @@ sections:
           organization_url: https://scholarships.vinuni.edu.vn/masters-ph-d-scholarship-program/
           title: Vingroup Scholarship
           url: https://scholarships.vinuni.edu.vn/cohort-2023/
+        - certificate_url: ''
+          date_end: ''
+          date_start: '2022-09-01'
+          description: ''
+          organization: Ho Chi Minh City University of Technology
+          organization_url: https://hcmut.edu.vn/en
+          title: Excellent Thesis Award
+          url: ''
+        - certificate_url: ''
+          date_end: ''
+          date_start: '2022-05-01'
+          description: ''
+          organization: SBA
+          organization_url: ''
+          title: SBA Scholarship
+          url: ''
     design:
       columns: '2'  
   # - block: collection
