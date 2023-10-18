@@ -33,6 +33,9 @@ interests:
 # Education to show in About widget
 education:
   courses:
+    - course: MSE in Robotics
+      institution: University of Pennsylvania
+      year: 2025
     - course: BE in Mechatronic Engineering
       institution: Ho Chi Minh City University of Technology
       year: 2022
