@@ -45,7 +45,7 @@ sections:
           company_logo: ''
           location: Binh Duong
           date_start: '2023-01-02'
-          date_end: ''
+          date_end: '2023-05-31'
           # description: |2-
           #     Responsibilities include:
 
