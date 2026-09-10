@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes — Thanh Ly</title>
+    <meta name="description"
+      content="Short, occasional write-ups from Thanh Ly — research, food, and everything in between.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <div class="layout">
+
+      <aside class="sidebar">
+        <div class="sidebar-inner">
+          <img class="avatar" src="assets/img/profile.jpg" alt="Thanh Ly">
+
+          <h1>Thanh Ly</h1>
+          <p class="role">Acting Head of Reinforcement Learning Department,
+            VinRobotics</p>
+          <p class="subrole">MSE in Robotics, University of Pennsylvania
+            &middot; Vingroup Scholar</p>
+
+          <ul class="contact-list" aria-label="Contact and profile links">
+            <li>
+              <a class="cv-link" href="assets/cv/Thanh_Ly_CV.pdf"
+                target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Curriculum Vitae
+              </a>
+            </li>
+            <li><a href="mailto:lyphucthanh0610@gmail.com">Email</a></li>
+            <li><a href="https://linkedin.com/in/phuc-thanh-ly/" target="_blank"
+                rel="noopener">LinkedIn</a></li>
+            <li><a
+                href="https://scholar.google.com/citations?user=v0vRz8cAAAAJ&hl=en"
+                target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://github.com/capfab" target="_blank"
+                rel="noopener">GitHub</a></li>
+          </ul>
+
+          <nav class="section-nav" aria-label="Page sections">
+            <a href="index.html#about">About</a>
+            <a href="index.html#news">News</a>
+            <a href="index.html#research">Research</a>
+            <a href="experience.html">Experience</a>
+            <a href="notes.html" class="is-current">Notes</a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content">
+
+        <section id="notes">
+          <h2>Notes</h2>
+          <p class="section-note">Short, occasional write-ups. Pick a
+            topic.</p>
+
+          <!--
+        NOTES INDEX — how to add a new topic:
+        Copy a .topic-tile block below, point its href at a new page under
+        notes/ (e.g. notes/travel.html), and build that page using
+        notes/research.html or notes/food.html as a starting template.
+      -->
+
+          <div class="topic-grid">
+            <a class="topic-tile" href="notes/food.html">
+              <img class="topic-tile-thumb"
+                src="assets/img/notes_images/vienna-apfelstrudel-1.jpg"
+                alt="Apfelstrudel with whipped cream at Caf&eacute; Mozart, Vienna">
+              <div class="topic-tile-body">
+                <span class="topic-tile-title">Food</span>
+                <span class="topic-tile-count">1 article</span>
+              </div>
+            </a>
+
+            <a class="topic-tile" href="notes/research.html">
+              <img class="topic-tile-thumb"
+                src="assets/img/notes_images/oli-research-note.jpg"
+                alt="LimX Dynamics' Oli and Tron1 humanoid robots on display at a robotics conference expo">
+              <div class="topic-tile-body">
+                <span class="topic-tile-title">Research</span>
+                <span class="topic-tile-count">2 notes</span>
+              </div>
+            </a>
+
+            <a class="topic-tile" href="notes/travel.html">
+              <img class="topic-tile-thumb"
+                src="assets/img/notes_images/yosemite-halfdome-1.jpg"
+                alt="El Capitan and Half Dome at dusk from Tunnel View, Yosemite">
+              <div class="topic-tile-body">
+                <span class="topic-tile-title">Travel</span>
+                <span class="topic-tile-count">4 trips</span>
+              </div>
+            </a>
+
+            <a class="topic-tile" href="notes/hobbies.html">
+              <img class="topic-tile-thumb"
+                src="assets/img/notes_images/vin33-chess.jpg"
+                alt="Thanh Ly mid-match at the Vin33 Chinese Chess Tournament">
+              <div class="topic-tile-body">
+                <span class="topic-tile-title">Hobbies</span>
+                <span class="topic-tile-count">1 note</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <footer>
+      <div class="wrap">
+        <p>Thanh Ly &middot; <a
+            href="mailto:lyphucthanh0610@gmail.com">lyphucthanh0610 (at)
+            gmail.com</a></p>
+        <p class="fine-print">Built with plain HTML &amp; CSS, hosted on GitHub
+          Pages.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

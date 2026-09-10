@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Notes — Thanh Ly</title>
+    <meta name="description"
+      content="Short, occasional research notes from Thanh Ly.">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body>
+
+    <div class="layout">
+
+      <aside class="sidebar">
+        <div class="sidebar-inner">
+          <img class="avatar" src="../assets/img/profile.jpg" alt="Thanh Ly">
+
+          <h1>Thanh Ly</h1>
+          <p class="role">Acting Head of Reinforcement Learning Department,
+            VinRobotics</p>
+          <p class="subrole">MSE in Robotics, University of Pennsylvania
+            &middot; Vingroup Scholar</p>
+
+          <ul class="contact-list" aria-label="Contact and profile links">
+            <li>
+              <a class="cv-link" href="../assets/cv/Thanh_Ly_CV.pdf"
+                target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Curriculum Vitae
+              </a>
+            </li>
+            <li><a href="mailto:lyphucthanh0610@gmail.com">Email</a></li>
+            <li><a href="https://linkedin.com/in/phuc-thanh-ly/" target="_blank"
+                rel="noopener">LinkedIn</a></li>
+            <li><a
+                href="https://scholar.google.com/citations?user=v0vRz8cAAAAJ&hl=en"
+                target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://github.com/capfab" target="_blank"
+                rel="noopener">GitHub</a></li>
+          </ul>
+
+          <nav class="section-nav" aria-label="Page sections">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#news">News</a>
+            <a href="../index.html#research">Research</a>
+            <a href="../experience.html">Experience</a>
+            <a href="../notes.html" class="is-current">Notes</a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content">
+
+        <section id="research-notes">
+          <p class="notes-back"><a href="../notes.html">&larr; All notes</a></p>
+          <h2>Research</h2>
+
+          <div class="note-entry">
+            <div class="entry-head">
+              <h3>The first real step</h3>
+              <span class="period">June 2026</span>
+            </div>
+            <p>
+              We ran TACT-ful on the actual robot for the first time a few
+              weeks ago, stairs with 20&nbsp;cm risers, the humanoid
+              carrying a 20&nbsp;kg box, zero retraining from sim. I was
+              standing by the stairwell with three other people from the
+              team, everyone pretty quiet, and it just went up. No
+              fine-tuning, no last-minute checkpoint swap. One try, and for
+              a second nobody said anything because we half expected it to
+              trip on the last step.
+            </p>
+            <p>
+              I've sat through enough of these demos by now that I probably
+              shouldn't get this worked up over a policy transferring
+              cleanly, but I still do. Most of what changed for this one was
+              in the terrain cost maps and how we simulate carrying a load
+              without actually modeling contact forces. None of it feels
+              especially clever looking back. It's more that we finally
+              stopped guessing at what mattered and started testing it
+              properly.
+            </p>
+          </div>
+
+          <div class="note-entry">
+            <div class="entry-head">
+              <h3>From bin-picking to walking</h3>
+              <span class="period">November 2025</span>
+            </div>
+            <p>
+              Was cleaning out an old drive and found the code from my
+              undergrad thesis: a structured-light setup for picking
+              parts out of a bin with an industrial arm. Looking at it now
+              it's kind of rough, hardcoded thresholds everywhere, a
+              calibration routine I had to babysit by hand every time the
+              lighting changed. But I remember being genuinely thrilled the
+              first time it picked the right part on its own.
+            </p>
+            <p>
+              It's a strange thing to compare to what I work on now, since
+              RL for humanoid locomotion doesn't look anything like
+              structured-light scanning on paper. Most days though it still
+              comes down to a similar question: does the robot know enough
+              about what's around it to act correctly. Back then that meant
+              getting a clean point cloud out of two cameras and some gray
+              codes. Now it means training a policy across a few thousand
+              simulated environments and hoping it holds up outside of
+              them. Different tools, but the same feeling when something
+              finally works that didn't the day before.
+            </p>
+          </div>
+
+        </section>
+
+      </main>
+    </div>
+
+    <footer>
+      <div class="wrap">
+        <p>Thanh Ly &middot; <a
+            href="mailto:lyphucthanh0610@gmail.com">lyphucthanh0610 (at)
+            gmail.com</a></p>
+        <p class="fine-print">Built with plain HTML &amp; CSS, hosted on GitHub
+          Pages.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
