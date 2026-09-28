@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience — Thanh Ly</title>
@@ -60,6 +70,26 @@
             <a href="experience.html" class="is-current">Experience</a>
             <a href="notes.html">Notes</a>
           </nav>
+
+          <button type="button" id="theme-toggle" class="theme-toggle"
+            aria-label="Color theme: System. Click to change.">
+            <svg class="theme-toggle-icon icon-sun" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41">
+              </path>
+            </svg>
+            <svg class="theme-toggle-icon icon-moon" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span class="theme-toggle-label">System</span>
+          </button>
         </div>
       </aside>
 
@@ -320,11 +350,12 @@
       <div class="wrap">
         <p>Thanh Ly &middot; <a
             href="mailto:lyphucthanh0610@gmail.com">lyphucthanh0610 (at)
-            gmail.com</a></p>
+            gmail (dot) com</a></p>
         <p class="fine-print">Built with plain HTML &amp; CSS, hosted on GitHub
           Pages.</p>
       </div>
     </footer>
 
+    <script src="assets/js/theme.js" defer></script>
   </body>
 </html>
