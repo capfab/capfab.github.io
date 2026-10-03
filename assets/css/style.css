@@ -7,6 +7,8 @@
   --accent: #3f6659;
   --accent-soft: #e3ece6;
   --accent-warm: #8a5a3b;
+  --hl-ink: #9c4410;
+  --hl-bg: rgba(232, 150, 70, 0.26);
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -21,6 +23,8 @@
     --accent: #7fb39c;
     --accent-soft: #22302a;
     --accent-warm: #d6a475;
+    --hl-ink: #f5bd82;
+    --hl-bg: rgba(222, 150, 80, 0.2);
   }
 }
 
@@ -33,6 +37,8 @@
   --accent: #7fb39c;
   --accent-soft: #22302a;
   --accent-warm: #d6a475;
+  --hl-ink: #f5bd82;
+  --hl-bg: rgba(222, 150, 80, 0.2);
 }
 
 * { box-sizing: border-box; }
@@ -371,14 +377,69 @@ main section:last-child {
   gap: 28px;
 }
 
+.hero-clips {
+  margin: 0.4rem 0 1.6rem;
+}
+
+.hero-clips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.hero-clip {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  aspect-ratio: 16 / 9;
+}
+
+.hero-clip video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-clip-label {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-clips figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 480px) {
+  .hero-clips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .hl-task {
   color: var(--accent);
   font-weight: 600;
 }
 
 .hl-direction {
-  color: var(--accent-warm);
+  color: var(--hl-ink);
   font-weight: 600;
+  background: linear-gradient(transparent 55%, var(--hl-bg) 55%);
+  padding: 0 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .mentors-label {
@@ -503,6 +564,115 @@ main section:last-child {
   background: var(--accent);
 }
 
+/* Research map (draft) */
+
+.research-map {
+  margin: 0.6rem 0 1.8rem;
+  padding: 1rem 1rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.rm-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+.rm-tall { display: none; max-width: 360px; margin: 0 auto; }
+
+@media (max-width: 560px) {
+  .rm-wide { display: none; }
+  .rm-tall { display: block; }
+}
+
+.rm-node rect {
+  fill: var(--bg-alt);
+  stroke: var(--border);
+  stroke-width: 1.2;
+}
+
+.rm-core rect {
+  stroke: var(--accent);
+  stroke-width: 1.6;
+}
+
+.rm-title {
+  fill: var(--ink);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.rm-sub {
+  fill: var(--ink-soft);
+  font-size: 11.5px;
+}
+
+.rm-edge {
+  fill: none;
+  stroke: var(--ink-soft);
+  stroke-width: 1.4;
+}
+
+.rm-feedback {
+  stroke-dasharray: 4 4;
+}
+
+.rm-head {
+  fill: var(--ink-soft);
+}
+
+.rm-edge-label {
+  fill: var(--ink-soft);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.rm-chip rect {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1;
+}
+
+.rm-chip text {
+  fill: var(--accent);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+a.rm-chip:hover rect,
+a.rm-chip:focus-visible rect {
+  fill: var(--accent);
+}
+
+a.rm-chip:hover text,
+a.rm-chip:focus-visible text {
+  fill: var(--bg);
+}
+
+.rm-chip-tab rect {
+  fill: var(--bg-alt);
+}
+
+.rm-chip-now rect {
+  fill: var(--bg-alt);
+  stroke: var(--hl-ink);
+}
+
+.rm-chip-now text {
+  fill: var(--hl-ink);
+}
+
+.research-map figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
 /* Research cards */
 
 .card {
@@ -580,6 +750,22 @@ main section:last-child {
 
 .projects-grid .card h3 {
   font-size: 1rem;
+}
+
+.projects-grid .card .org {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  font-weight: 400;
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.2rem;
+}
+
+.card-links .project-link + .project-link {
+  margin-left: 0;
 }
 
 .projects-grid .card p:not(.org) {
@@ -856,6 +1042,148 @@ main section:last-child {
 
 .entry p:last-child {
   margin-bottom: 0;
+}
+
+/* Experience page: organisation, then its roles */
+
+.xp-section h2 {
+  margin-bottom: 1.4rem;
+}
+
+.xp {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.xp:last-child {
+  margin-bottom: 0;
+}
+
+.xp-logo {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.xp-org {
+  margin: 0.45rem 0 0.7rem;
+  font-size: 1.08rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.6rem;
+}
+
+.xp-place {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.xp-roles-multi {
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+}
+
+.xp-role {
+  margin-bottom: 1rem;
+}
+
+.xp-role:last-child {
+  margin-bottom: 0;
+}
+
+.xp-role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0 1rem;
+}
+
+.xp-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.xp-period {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.xp-desc {
+  margin: 0.2rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.xp-group {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  margin: 2.6rem 0 1.2rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+
+.award-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.award-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.award-list li:last-child {
+  border-bottom: none;
+}
+
+.award-list span {
+  font-size: 0.84rem;
+  opacity: 0.8;
+}
+
+.award-list span::before {
+  content: "\00b7\a0";
+}
+
+@media (max-width: 480px) {
+  .xp {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 0 0.75rem;
+  }
+
+  .xp-logo {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+  }
+
+  .xp-org {
+    margin-top: 0.25rem;
+  }
+
+  .xp-roles-multi {
+    padding-left: 0.8rem;
+  }
 }
 
 /* Awards */

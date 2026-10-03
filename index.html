@@ -97,41 +97,51 @@
 
         <section id="about">
           <h2>About</h2>
+          <figure class="hero-clips">
+            <div class="hero-clips-grid">
+              <div class="hero-clip">
+                <video src="assets/video/tactful-sim.mp4"
+                  poster="assets/video/tactful-sim-poster.jpg" autoplay muted
+                  loop playsinline preload="metadata"
+                  aria-label="Simulated humanoid carrying a basket up stairs and across a field of boxes"></video>
+                <span class="hero-clip-label">Simulation</span>
+              </div>
+              <div class="hero-clip">
+                <video src="assets/video/tactful-real.mp4"
+                  poster="assets/video/tactful-real-poster.jpg" autoplay muted
+                  loop playsinline preload="metadata"
+                  aria-label="Real humanoid climbing up and walking down a flight of stairs"></video>
+                <span class="hero-clip-label">Real humanoid</span>
+              </div>
+            </div>
+            <figcaption><a href="https://fai-rl-tech.github.io/tact-locomotion.github.io/"
+                target="_blank" rel="noopener">TACT-ful</a></figcaption>
+          </figure>
           <div class="about-grid">
             <div class="about-text">
               <p>
-                I lead the Reinforcement Learning Department at VinRobotics in
-                Hanoi, where I also work hands-on, taking locomotion and
-                loco-manipulation policies from simulation onto real humanoids.
-                We build robots that <span class="hl-direction">walk</span>,
-                <span class="hl-direction">carry</span>, <span
-                  class="hl-direction">recover their balance</span>, and <span
-                  class="hl-direction">adapt to terrain and context</span>, all
-                under payload. Before this, I did my MSE in Robotics at Penn,
-                and my undergraduate thesis at HCMUT was a
-                structured-light vision system for robotic bin-picking.
+                I want humanoids that can take a task, however it's specified,
+                and carry it out in whatever scene they're in. My research is
+                on <span class="hl-direction">whole-body control grounded in
+                  perception</span>, where the task's intent stays fixed and
+                the execution adapts to what the robot sees.
               </p>
               <p>
-                I care deeply about the role perception and world
-                understanding play in robot behavior, because what a robot can
-                do depends on what it can see and make sense of. My research
-                focuses on closing the gap between what a robot perceives and
-                what it can safely do. Ultimately, I want to explore the
-                fundamental skills future robots will need, <span
-                  class="hl-direction">whole-body control</span> and <span
-                  class="hl-direction">loco-manipulation</span>, grounded in
-                the context of their environment.
+                At VinRobotics I lead the Reinforcement Learning Department.
+                We've taken perceptive locomotion and whole-body compliance
+                from simulation onto real humanoids under load, and I'm now
+                building perception into the pretraining of general
+                whole-body controllers.
               </p>
               <p>
-                I'm applying to PhD programs in robot learning focused on these
-                topics. In the meantime, I'm also open to <span
-                  class="hl-direction">full-time opportunities</span> and <span
-                  class="hl-direction">research collaborations</span>, so
-                please reach out if that's you.
+                I did my MSE in Robotics at Penn and a structured-light vision
+                thesis at HCMUT. I'm applying to PhD programs in robot
+                learning, and I'm open to full-time roles and research
+                collaborations in the meantime.
               </p>
               <p>
-                Outside the lab, I'm usually the one already looking at flights
-                for the next trip. More in <a href="#news">News</a>.
+                Outside of work, I travel a lot. More in <a
+                  href="notes/travel.html">Travel</a>.
               </p>
             </div>
 
@@ -154,12 +164,6 @@
                     </p>
                     <p class="mentor-role">Current advisor &middot;
                       VinRobotics &middot; TU Darmstadt &middot; VinUni</p>
-                    <p class="mentor-note">
-                      Insists every idea earns its place on hardware, not just
-                      in
-                      a review PDF, which is the discipline behind TACT-ful and
-                      CompliantWBC.
-                    </p>
                   </div>
                 </div>
 
@@ -173,11 +177,6 @@
                     </p>
                     <p class="mentor-role">MSE advisor &middot; University of
                       Pennsylvania</p>
-                    <p class="mentor-note">
-                      Taught me to treat autonomy as a safety problem first,
-                      performance second,
-                      a habit that's stuck since Penn.
-                    </p>
                   </div>
                 </div>
 
@@ -192,11 +191,6 @@
                     </p>
                     <p class="mentor-role">Undergraduate thesis advisor
                       &middot; HCMUT</p>
-                    <p class="mentor-note">
-                      Supervised my undergraduate thesis on structured-light
-                      bin-picking, the project that got me into robotics in
-                      the first place.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -207,8 +201,12 @@
         <section id="news">
           <h2>News</h2>
           <div class="now-card">
-            <p class="now-updated">Last touched September 2026</p>
+            <p class="now-updated">Last touched October 2026</p>
             <ul class="now-list">
+              <li>
+                <a href="#research">TACT-ful</a> was accepted to the IROS 2026
+                Workshop on Full-Shift Robot Co-Workers.
+              </li>
               <li>
                 Trying to get my hands on a Microduck from <a
                   href="https://www.pollen-robotics.com/" target="_blank"
@@ -219,14 +217,38 @@
                 Won Second Prize at the Vin33 Chinese Chess Tournament,
                 August 2026. More in <a href="notes/hobbies.html">Hobbies</a>.
               </li>
-              <li>Based in Hanoi, plotting the next trip somewhere I haven't
-                been.</li>
             </ul>
           </div>
         </section>
 
         <section id="research">
           <h2>Research</h2>
+
+          <!-- DRAFT: research map. Remove this <figure> to drop it. -->
+          <figure class="research-map">
+            <svg class="rm-svg rm-wide" viewBox="0 0 760 292" role="img" aria-labelledby="rm-title-d"><title id="rm-title-d">Research map: a task and perception feed a whole-body controller that runs on a real humanoid, with each project placed on the part it addresses</title><defs><marker id="rm-arrow-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm-head"/></marker></defs><g class="rm-node"><rect x="10" y="28" width="170" height="64" rx="8"/><text class="rm-title" x="95.0" y="57.0" text-anchor="middle">Task</text><text class="rm-sub" x="95.0" y="75.0" text-anchor="middle">however it&#8217;s specified</text></g><g class="rm-node"><rect x="10" y="198" width="170" height="64" rx="8"/><text class="rm-title" x="95.0" y="227.0" text-anchor="middle">Perception</text><text class="rm-sub" x="95.0" y="245.0" text-anchor="middle">terrain, contact, load</text></g><g class="rm-node rm-core"><rect x="290" y="100" width="190" height="90" rx="8"/><text class="rm-title" x="385.0" y="146.0" text-anchor="middle">Whole-body controller</text><text class="rm-sub" x="385.0" y="164.0" text-anchor="middle">intent fixed, execution adapts</text></g><g class="rm-node"><rect x="580" y="100" width="170" height="90" rx="8"/><text class="rm-title" x="665.0" y="142.0" text-anchor="middle">Real humanoid</text><text class="rm-sub" x="665.0" y="160.0" text-anchor="middle">sim-to-real, under load</text></g><path class="rm-edge" d="M180,60 C235,60 240,125 288,128" marker-end="url(#rm-arrow-d)"/><path class="rm-edge" d="M180,230 C235,230 240,165 288,162" marker-end="url(#rm-arrow-d)"/><path class="rm-edge" d="M480,145 L578,145" marker-end="url(#rm-arrow-d)"/><path class="rm-edge rm-feedback" d="M665,190 C665,250 385,250 385,192" marker-end="url(#rm-arrow-d)"/><text class="rm-edge-label" x="525" y="266" text-anchor="middle">contact forces</text><a href="https://tdmtp.github.io/" target="_blank" rel="noopener" class="rm-chip"><rect x="203" y="76" width="74" height="22" rx="11"/><text x="240.0" y="91" text-anchor="middle">TD-MTP</text></a><a href="https://fai-rl-tech.github.io/moe-perceptive/" target="_blank" rel="noopener" class="rm-chip"><rect x="196" y="236" width="92" height="22" rx="11"/><text x="242.0" y="251" text-anchor="middle">MoE terrain</text></a><a href="https://fai-rl-tech.github.io/tact-locomotion.github.io/" target="_blank" rel="noopener" class="rm-chip"><rect x="196" y="262" width="80" height="22" rx="11"/><text x="236.0" y="277" text-anchor="middle">TACT-ful</text></a><a href="https://compliantwbc.github.io/" target="_blank" rel="noopener" class="rm-chip"><rect x="574" y="204" width="110" height="22" rx="11"/><text x="629.0" y="219" text-anchor="middle">CompliantWBC</text></a><a href="https://silentgradient.github.io/SOFIE/" target="_blank" rel="noopener" class="rm-chip rm-chip-tab"><rect x="306" y="89" width="62" height="22" rx="11"/><text x="337.0" y="104" text-anchor="middle">SOFIE</text></a><g class="rm-chip rm-chip-now"><rect x="376" y="89" width="98" height="22" rx="11"/><text x="425.0" y="104" text-anchor="middle">Current work</text></g></svg>
+            <svg class="rm-svg rm-tall" viewBox="0 0 360 464" role="img" aria-labelledby="rm-title-m"><title id="rm-title-m">Research map: a task and perception feed a whole-body controller that runs on a real humanoid, with each project placed on the part it addresses</title><defs><marker id="rm-arrow-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm-head"/></marker></defs><g class="rm-node"><rect x="10" y="10" width="160" height="64" rx="8"/><text class="rm-title" x="90.0" y="39.0" text-anchor="middle">Task</text><text class="rm-sub" x="90.0" y="57.0" text-anchor="middle">however it&#8217;s specified</text></g><g class="rm-node"><rect x="190" y="10" width="160" height="64" rx="8"/><text class="rm-title" x="270.0" y="39.0" text-anchor="middle">Perception</text><text class="rm-sub" x="270.0" y="57.0" text-anchor="middle">terrain, contact, load</text></g><g class="rm-node rm-core"><rect x="60" y="190" width="240" height="84" rx="8"/><text class="rm-title" x="180.0" y="235.0" text-anchor="middle">Whole-body controller</text><text class="rm-sub" x="180.0" y="253.0" text-anchor="middle">intent fixed, execution adapts</text></g><g class="rm-node"><rect x="60" y="380" width="240" height="74" rx="8"/><text class="rm-title" x="180.0" y="414.0" text-anchor="middle">Real humanoid</text><text class="rm-sub" x="180.0" y="432.0" text-anchor="middle">sim-to-real, under load</text></g><path class="rm-edge" d="M90,74 C90,130 150,140 150,188" marker-end="url(#rm-arrow-m)"/><path class="rm-edge" d="M270,74 C270,130 210,140 210,188" marker-end="url(#rm-arrow-m)"/><path class="rm-edge" d="M150,274 L150,378" marker-end="url(#rm-arrow-m)"/><path class="rm-edge rm-feedback" d="M300,417 C345,417 345,232 302,232" marker-end="url(#rm-arrow-m)"/><text class="rm-edge-label" x="342" y="330" text-anchor="middle" transform="rotate(90 342 330)">contact forces</text><a href="https://tdmtp.github.io/" target="_blank" rel="noopener" class="rm-chip"><rect x="16" y="112" width="74" height="22" rx="11"/><text x="53.0" y="127" text-anchor="middle">TD-MTP</text></a><a href="https://fai-rl-tech.github.io/moe-perceptive/" target="_blank" rel="noopener" class="rm-chip"><rect x="262" y="98" width="92" height="22" rx="11"/><text x="308.0" y="113" text-anchor="middle">MoE terrain</text></a><a href="https://fai-rl-tech.github.io/tact-locomotion.github.io/" target="_blank" rel="noopener" class="rm-chip"><rect x="262" y="126" width="80" height="22" rx="11"/><text x="302.0" y="141" text-anchor="middle">TACT-ful</text></a><a href="https://compliantwbc.github.io/" target="_blank" rel="noopener" class="rm-chip"><rect x="160" y="316" width="110" height="22" rx="11"/><text x="215.0" y="331" text-anchor="middle">CompliantWBC</text></a><a href="https://silentgradient.github.io/SOFIE/" target="_blank" rel="noopener" class="rm-chip rm-chip-tab"><rect x="88" y="179" width="62" height="22" rx="11"/><text x="119.0" y="194" text-anchor="middle">SOFIE</text></a><g class="rm-chip rm-chip-now"><rect x="160" y="179" width="98" height="22" rx="11"/><text x="209.0" y="194" text-anchor="middle">Current work</text></g></svg>
+            <figcaption>Current project profile</figcaption>
+          </figure>
+
+          <article class="card">
+            <img class="card-figure" src="assets/img/sofie-teaser.jpg"
+              alt="Three simulated humanoids, each read by a height scan drawn as dots, crossing stepping stones, climbing stairs and walking over rough ground">
+            <h3>Pretraining Foundation Policies for Perceptive Humanoid
+              Locomotion with Offline RL
+              <span class="tag">Under review</span></h3>
+            <p>
+              SOFIE learns perceptive humanoid locomotion entirely offline,
+              from rollouts of experts of mixed quality. It scores whole
+              footsteps by their advantage and imitates the better ones more,
+              so one policy walks three humanoids over stepping stones, stairs
+              and rough ground where behavior cloning copies the mistakes.
+              Fine-tuned on a small dataset from an unseen humanoid, a policy
+              pretrained with SOFIE also beats training from scratch.
+            </p>
+            <a class="project-link" href="https://silentgradient.github.io/SOFIE/"
+              target="_blank" rel="noopener">Project page &rarr;</a>
+          </article>
 
           <article class="card">
             <img class="card-figure" src="assets/img/tdmtp-teaser.png"
@@ -235,13 +257,10 @@
               Learning
               <span class="tag">Under review</span></h3>
             <p>
-              Model-based agents tune the planner that chooses actions and the
-              target the critic learns from separately. A paired study across
-              ten tasks shows the two interact: the multi-step TD(&lambda;)
-              target alone beats the baseline on eight tasks, the structured
-              tensor-graph planner alone on one, and on the stair task each
-              change alone hurts while the two together finish well above
-              baseline. 10 wins, 22 ties, and 6 losses across 38 tasks.
+              Model-based RL agents usually tune the planner and the critic's
+              learning target separately. Across ten tasks, TD-MTP finds that
+              the two interact. On a humanoid stair task, each change alone lowers the return, and the two combined
+              beat the baseline.
             </p>
             <a class="project-link" href="https://tdmtp.github.io/"
               target="_blank" rel="noopener">Project page &rarr;</a>
@@ -271,7 +290,7 @@
               alt="Service humanoid traversing structured terrain while carrying a payload, guided by terrain affordance cost maps">
             <h3>TACT-ful: Multi-Channel Terrain Affordance and Compliance
               Training for Payload-Robust Perceptive Humanoid Locomotion
-              <span class="tag">Under review</span></h3>
+              <span class="tag">IROS 2026 Workshop</span></h3>
             <p>
               A perceptive locomotion system for payload-robust humanoid
               walking.
@@ -315,13 +334,24 @@
 
           <h3 class="group-label">Under Review</h3>
           <ol class="pub-list">
-            <li><strong>Thanh Ly</strong>, Truong-Duy Dang, Chien Le, Tan-Dzung
-              Do, Phuong Tuan Dat, Cuc T. Trinh, Vien Anh Ngo, and An T. Le,
-              &ldquo;TACT-ful: Multi-Channel Terrain Affordance and Compliance
-              Training for Payload-Robust Perceptive Humanoid Locomotion.&rdquo;
-              Manuscript under review.
-              <a
-                href="https://fai-rl-tech.github.io/tact-locomotion.github.io/"
+            <li>Tai Hoang, Huy Le, <strong>Thanh Ly</strong>, Truong-Duy Dang,
+              Chien Le, Aleksandar Taranovic, Gerhard Neumann, An T. Le, and
+              Vien Anh Ngo, &ldquo;Pretraining Foundation Policies for
+              Perceptive Humanoid Locomotion with Offline RL.&rdquo; Manuscript
+              under review. <a href="https://silentgradient.github.io/SOFIE/" target="_blank"
+                rel="noopener">Project page</a></li>
+            <li>Quynh Anh Huynh, <strong>Thanh Ly</strong>, Hoang M. Truong,
+              Cuc T. Trinh, Chien Le, Georgia Chalvatzaki, and An T. Le,
+              &ldquo;TD-MTP: Coupling Structured Planning with Multi-Step
+              Value Learning.&rdquo; Manuscript under review. <a
+                href="https://tdmtp.github.io/" target="_blank"
+                rel="noopener">Project page</a></li>
+            <li><strong>Thanh Ly</strong>, Chien Le, Truong-Duy Dang, Duy
+              Nguyen Ho Minh, Duy-Dung Le, Vien Anh Ngo, and An T. Le,
+              &ldquo;Terrain Traversal Without Motion Priors: Expert-Routed
+              Humanoid Locomotion at Deployment Fidelity.&rdquo; Manuscript
+              under review. <a
+                href="https://fai-rl-tech.github.io/moe-perceptive/"
                 target="_blank" rel="noopener">Project page</a></li>
             <li>Tan-Dzung Do, Cuc T. Trinh, Phuong Tuan Dat, Truong-Duy Dang,
               Chien Le, <strong>Thanh Ly</strong>, Vien Anh Ngo, and An T. Le,
@@ -330,6 +360,18 @@
               under review. <a
                 href="https://compliantwbc.github.io/" target="_blank"
                 rel="noopener">Project page</a></li>
+          </ol>
+
+          <h3 class="group-label">Workshop Papers</h3>
+          <ol class="pub-list">
+            <li><strong>Thanh Ly</strong>, Truong-Duy Dang, Chien Le, Tan-Dzung
+              Do, Phuong Tuan Dat, Cuc T. Trinh, Vien Anh Ngo, and An T. Le,
+              &ldquo;TACT-ful: Multi-Channel Terrain Affordance and Compliance
+              Training for Payload-Robust Perceptive Humanoid Locomotion,&rdquo;
+              <em>IROS 2026 Workshop on Full-Shift Robot Co-Workers</em>, 2026.
+              <a
+                href="https://fai-rl-tech.github.io/tact-locomotion.github.io/"
+                target="_blank" rel="noopener">Project page</a></li>
           </ol>
 
           <h3 class="group-label">Peer-Reviewed</h3>
