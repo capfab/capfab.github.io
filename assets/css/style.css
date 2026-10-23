@@ -783,6 +783,14 @@ a.rm-chip:focus-visible text {
   background: var(--bg-alt);
 }
 
+.card-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .card-video iframe {
   position: absolute;
   inset: 0;
