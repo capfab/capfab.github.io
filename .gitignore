@@ -2,3 +2,8 @@
 *.swp
 *.swo
 *~
+_site/
+.jekyll-cache/
+.bundle/
+vendor/
+_drafts/

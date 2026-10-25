@@ -1,0 +1,29 @@
+---
+layout: base
+---
+{%- assign key = page.categories.first %}
+{%- assign topic = site.data.topics | where: "key", key | first %}
+{%- assign siblings = site.categories[key] %}
+{%- for p in siblings %}{% if p.url == page.url %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}
+{%- assign newer_i = i | minus: 1 %}
+{%- assign older_i = i | plus: 1 %}
+        <article class="post" id="{{ key }}-notes">
+          <p class="notes-back"><a href="{{ topic.page | relative_url }}">&larr; {{ topic.title }}</a></p>
+          <div class="entry-head post-head">
+            <h2>{{ page.title }}</h2>
+            <span class="period">{{ page.date | date: "%B %Y" }}</span>
+          </div>
+          <div class="note-entry">
+{{ content }}
+          </div>
+          <nav class="post-nav" aria-label="More {{ topic.title | downcase }} notes">
+            {%- if older_i < siblings.size %}
+            {%- assign older = siblings[older_i] %}
+            <a class="post-nav-older" href="{{ older.url | relative_url }}"><span>Older</span>{{ older.title }}</a>
+            {%- endif %}
+            {%- if i > 0 %}
+            {%- assign newer = siblings[newer_i] %}
+            <a class="post-nav-newer" href="{{ newer.url | relative_url }}"><span>Newer</span>{{ newer.title }}</a>
+            {%- endif %}
+          </nav>
+        </article>

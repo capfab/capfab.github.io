@@ -1,0 +1,31 @@
+# Jekyll settings. index.html and experience.html are plain HTML; Jekyll copies them as they are.
+# Notes are posts in _posts/, one file each: see README.md.
+title: Thanh Ly
+description: Short, occasional write-ups from Thanh Ly — research, food, and everything in between.
+url: https://capfab.github.io
+baseurl: ""
+timezone: Asia/Ho_Chi_Minh
+
+# No Pages theme: the theme would replace assets/css/style.css with its own.
+theme: null
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: notes/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /notes/:categories/:title/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

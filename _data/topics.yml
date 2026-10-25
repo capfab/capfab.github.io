@@ -1,0 +1,30 @@
+# One entry per notes topic, in tile order. `key` is the category used in each post's front matter.
+- key: food
+  title: Food
+  page: /notes/food.html
+  image: /assets/img/notes_images/vienna-apfelstrudel-1.jpg
+  alt: "Apfelstrudel with whipped cream at Café Mozart, Vienna"
+  noun: article
+  nouns: articles
+- key: research
+  title: Research
+  page: /notes/research.html
+  image: /assets/img/notes_images/oli-research-note.jpg
+  alt: "LimX Dynamics' Oli and Tron1 humanoid robots on display at a robotics conference expo"
+  noun: note
+  nouns: notes
+- key: travel
+  title: Travel
+  page: /notes/travel.html
+  image: /assets/img/notes_images/yosemite-halfdome-1.jpg
+  alt: "El Capitan and Half Dome at dusk from Tunnel View, Yosemite"
+  noun: trip
+  nouns: trips
+  note: One entry per trip, newest first.
+- key: hobbies
+  title: Hobbies
+  page: /notes/hobbies.html
+  image: /assets/img/notes_images/vin33-chess.jpg
+  alt: "Thanh Ly mid-match at the Vin33 Chinese Chess Tournament"
+  noun: note
+  nouns: notes
