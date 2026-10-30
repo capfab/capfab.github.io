@@ -149,6 +149,14 @@ a:focus-visible {
   margin: 0 0 0.5rem;
 }
 
+.sidebar h1 .name-line {
+  display: block;
+}
+
+.sidebar h1 .name-vi {
+  color: var(--accent-warm);
+}
+
 .sidebar .role {
   font-size: 0.98rem;
   color: var(--ink);
